@@ -6,13 +6,13 @@ Guide to Meshtastic setup for Festivals/Events
 - [Description](#description)
 - [What you need](#what-you-need)
 - [Shared Configuration](#shared-configuration)
+  - [Device Roles](#device-roles)
+  - [Recommended Settings](#recommended-settings)
 - [Channel Setup](#channel-setup)
 - [Future additions](#future-additions)
 
 ## Description
-Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Think: Off-Grid WhatsApp messaging that actually works!
-
-If your festival/event has poor mobile phone signal and you struggle to find your friends, you can keep in touch by using [Meshtastic](https://meshtastic.org/). This guide helps you configure and operate your off-grid mesh communications network, specifically with devices and settings that have been battle tested at festivals and events. The following has been successfully tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly.
+Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Think: Off-Grid WhatsApp messaging that actually works! This guide helps you configure and operate your off-grid mesh communications network, specifically with devices and settings that have been battle tested at festivals and events. It's been successfully tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly.
 
 ### Community run (very unofficial)
 - The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This is a quick-start guide if you just want to get you and your friends up and running quickly for an event/festival.
@@ -23,7 +23,7 @@ If your festival/event has poor mobile phone signal and you struggle to find you
 ## What you need
 
 ### Companion Device
-Cost: Circa £30-£40 each
+Cost: circa £30-£40 each
 
 ![Seeed X1 Tracker](assets/seeed_x1_tracker.png)
 
@@ -43,7 +43,7 @@ You use the messaging function from the Meshtastic app on your phone.
 Please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own.
 
 ### Coordinate on your mesh settings
-For the most effective mesh, everyone uses the same modem/radio settings at the event. The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other's mesh out (one big happy mesh family). Messages only get repeated by other Meshtastic devices if you're all using the same LoRa modem / Radio settings (Eg, same region, same frequency slot, same speed etc.  See more [here](https://meshtastic.org/docs/configuration/tips/#rebroadcast-public-traffic).
+For the most effective mesh, everyone uses the same modem/radio settings at the event. The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other's mesh out (one big happy mesh family). Messages only get repeated by other Meshtastic devices if you're all using the same LoRa modem / Radio settings (eg, same region, same frequency slot, same speed etc). See more [here](https://meshtastic.org/docs/configuration/tips/#rebroadcast-public-traffic).
 
 ### Device Roles
 - CLIENT: For almost ALL nodes.
@@ -66,27 +66,33 @@ For the highest certainty that your messages will be delivered at your event, us
 
 > Note: If a setting isn't in this list, leave it at its default.
 
-- Country/Region: Europe 868mhz (For UK / Europe)
-- Preset: Medium Range - Fast
-  - MediumFast can handle far more nodes than the default LongFast before becoming congested in a dense network, see: [Presets](https://meshtastic.org/docs/overview/radio-settings/#presets)
-- Rebroadcast Mode: Core Portnums Only
-- Frequency Slot: 0
-- Number of Hops: 3
-- Ignore MQTT: ON
-- OK to MQTT: OFF
-- Transmit Enabled: ON
-- Coding Rate: (Use Preset Default)
-- RX Boosted Gain: OFF (Uses more battery when on. Not required in a dense network at events)
-- User config: Set your 'Long Name' and 'Short Name' so everyone knows who you are in your channel
-- Position config:
-  - (Please don't be tempted to set these any lower as it can easily flood and overwhelm the network)
-  - Smart Position: ON
-  - Minimum Interval: 5 Mins
-  - Minimum Distance: 30 Metres
-  - Device GPS Update Interval: 5 Mins
+| Setting | Value | Notes |
+|---|---|---|
+| Country/Region | Europe 868mhz | For UK / Europe |
+| Preset | Medium Range - Fast | Handles far more nodes than default LongFast before becoming congested — see [Presets](https://meshtastic.org/docs/overview/radio-settings/#presets) |
+| Rebroadcast Mode | Core Portnums Only | |
+| Frequency Slot | 0 | |
+| Number of Hops | 3 | |
+| Ignore MQTT | ON | |
+| OK to MQTT | OFF | |
+| Transmit Enabled | ON | |
+| Coding Rate | Preset Default | |
+| RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
+| User config | — | Set your 'Long Name' and 'Short Name' so everyone knows who you are in your channel |
+
+**Position config**
+
+Don't be tempted to set these any lower — it can easily flood and overwhelm the network.
+
+| Setting | Value |
+|---|---|
+| Smart Position | ON |
+| Minimum Interval | 5 Mins |
+| Minimum Distance | 30 Metres |
+| Device GPS Update Interval | 5 Mins |
 
 ## Channel Setup
-Meshtastic is multi-channel (In the same way you might have multiple WhatsApp groups)
+Meshtastic is multi-channel (in the same way you might have multiple WhatsApp groups)
 - A public channel (eg: everyone within range)
 - A private channel (eg: a private WhatsApp group between only you and your friends)
 - Multiple private channels to keep different groups of friends separate.
@@ -108,6 +114,6 @@ To-Do / Contributions welcome...
 
 - **Map overlays** - Each year the festival map changes with the new venue layout. We must obtain the new festival map and overlay it to the correct latitude/longitude within the Meshtastic app - doing so enables you to see the location of your friends, relative to the festival layout. This assumes you are using one of the companion devices that include GPS/GNSS functionality (see recommended devices above).
 - **Alternative mesh technologies** - In the future this repo may also include information about using MeshCore, which is an alternative to Meshtastic.
-- **Coordinate on ROUTER/REPEATER locations.**
+- **Coordinate on ROUTER/REPEATER locations** - Agree placement as a group so routers don't clash or cause congestion.
 - **Contact festival organisers** - Request placing a ROUTER node on one of the festival's existing masts.
 - **Where to buy** - Links / Group-buys for companion devices.
