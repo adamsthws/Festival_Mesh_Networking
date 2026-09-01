@@ -17,7 +17,7 @@ Finding your friends at festivals without phone signal is HARD, [Meshtastic](htt
 ### Community run (very unofficial)
 - The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This is a quick-start guide if you just want to get you and your friends up and running quickly for an event/festival.
 - This is a place to co-ordinate, share configuration, ask the community for help.
-- See GitHub Discussions to ask (and kindly answer) questions. 
+- See [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions) to ask (and kindly answer) questions. 
 - Your contributions are very welcome here!
 
 ## What you need
