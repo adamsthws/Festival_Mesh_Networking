@@ -1,8 +1,10 @@
 # Festival Mesh Networking
 Guide to Meshtastic setup for Festivals/Events
+![Mesh Network Visualization](assets/mesh_network_visualization.png)
+
 
 ## Description
-Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshcore.co.uk) changes all that. Think: Off-Grid WhatsApp that actually works!
+Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshcore.co.uk) changes all that. Think: Off-Grid WhatsApp messaging that actually works!
 
 If your festival/event has poor mobile phone signal and you struggle to find your friends, you can keep in touch by using [Meshtastic](https://meshtastic.org/). This guide helps you configure and operate your off-grid mesh communications network, specifically with devices and settings that have been battle tested at festivals and events. The following has been successfully tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Metastatic works flawlessly.
 
