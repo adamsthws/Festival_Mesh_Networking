@@ -27,10 +27,11 @@ Cost: circa £30-£40 each
 
 ![Seeed X1 Tracker](assets/seeed_x1_tracker.png)
 
-Each person in your group will need their own companion device paired with the Meshtastic app on their phone.
-The two best companion devices to get are:
-- [Seeed X1 Tracker](https://wiki.seeedstudio.com/meshtracker_x1_intro/)
-- [Rak Wizmesh Tag](https://store.rakwireless.com/products/wismesh-tag-meshtastic-gps-lora-tracker-ip66)
+Each person in your group will need their own companion device paired with the Meshtastic app on their phone. Recommended festival companion devices are:
+- [Seeed T1000e](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) (Good | Older)
+- [Rak Wizmesh Tag](https://store.rakwireless.com/products/wismesh-tag-meshtastic-gps-lora-tracker-ip66) (Better | Newer)
+- **[Seeed X1 Tracker](https://wiki.seeedstudio.com/meshtracker_x1_intro/) (Best | Newest**)
+
 
 ### App (free)
 You connect your phone to your companion device over Bluetooth. 
@@ -52,8 +53,8 @@ For the most effective mesh, everyone uses the same modem/radio settings at the 
 #### ROUTER/REPEATER mode
 - [Avoid ROUTER/REPEATER mode](https://meshtastic.org/docs/configuration/tips/#avoid-routerand-repeater)
 - ONLY for EXCEPTIONALLY well-sited nodes (eg: Nodes 20+ metres up, central, on a TALL mast / in a TALL tree).
-- Too many (or poorly placed) ROUTER nodes will cause network issues. Only use ROUTER/REPEATER mode if you know what you are doing.
-- If at Shambala Festival (UK) - Router nodes have already been placed, you don't need them here.
+- Too many (or poorly placed) ROUTER nodes will cause network issues. (Official documentation reccomends that you only use ROUTER/REPEATER mode if you understand what what the impications are of this mode).
+- If at Shambala Festival (UK) - Router nodes have already been placed, you don't need any additional router nodes here.
 
 #### All other roles
 - Ignore them, they aren't relevant for festivals/events.
@@ -69,14 +70,14 @@ For the highest certainty that your messages will be delivered at your event, us
 | Setting | Value | Notes |
 |---|---|---|
 | Country/Region | Europe 868mhz | For UK / Europe |
-| Preset | Medium Range - Fast | Handles far more nodes than default LongFast before becoming congested — see [Presets](https://meshtastic.org/docs/overview/radio-settings/#presets) |
-| Rebroadcast Mode | Core Portnums Only | |
-| Frequency Slot | 0 | |
-| Number of Hops | 3 | |
-| Ignore MQTT | ON | |
-| OK to MQTT | OFF | |
+| Preset | Medium Range - Fast | Handles far more nodes than default LongFast before becoming congested - see [Presets Documentation](https://meshtastic.org/docs/overview/radio-settings/#presets) |
+| Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
+| Frequency Slot | 0 | 0 = default |
+| Number of Hops | 3 | 3 = default |
+| Ignore MQTT | ON | We don't need MQTT |
+| OK to MQTT | OFF | We don't need MQTT |
 | Transmit Enabled | ON | |
-| Coding Rate | Preset Default | |
+| Coding Rate | 4/5 | "Medium Fast" = 4/5 (Preset Default) |
 | RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
 | User config | — | Set your 'Long Name' and 'Short Name' so everyone knows who you are in your channel |
 
