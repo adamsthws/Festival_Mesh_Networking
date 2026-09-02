@@ -70,7 +70,7 @@ For the highest certainty that your messages will be delivered at your event, us
 | Setting | Value | Notes |
 |---|---|---|
 | Country/Region | Europe 868mhz | For UK / Europe |
-| Preset | Medium Range - Fast | Handles far more nodes than default LongFast before becoming congested - see [Presets Documentation](https://meshtastic.org/docs/overview/radio-settings/#presets) |
+| Preset | Medium-Fast | "Medium Range - Fast" handles far more nodes than the default Long-Fast preset before becoming congested - see [Presets Documentation](https://meshtastic.org/docs/overview/radio-settings/#presets) |
 | Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
 | Frequency Slot | 0 | 0 = default |
 | Number of Hops | 3 | 3 = default |
@@ -83,7 +83,7 @@ For the highest certainty that your messages will be delivered at your event, us
 
 **Position config**
 
-Don't be tempted to set these any lower — it can easily flood and overwhelm the network.
+Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
 
 | Setting | Value |
 |---|---|
