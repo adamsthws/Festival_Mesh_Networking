@@ -79,7 +79,7 @@ For the highest certainty that your messages will be delivered at your event, us
 | Transmit Enabled | ON | |
 | Coding Rate | 4/5 | "Medium Fast" = 4/5 (Preset Default) |
 | RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
-| User config | — | Set your 'Long Name' and 'Short Name' so everyone knows who you are in your channel |
+| User config | -Set your name- | Set your 'Long Name' and 'Short Name' so everyone knows who you are in your channel |
 
 **Position config**
 
