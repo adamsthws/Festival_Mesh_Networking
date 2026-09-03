@@ -44,7 +44,7 @@ You use the messaging function from the Meshtastic app on your phone.
 Please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own.
 
 ### Coordinate on your mesh settings
-For the most effective mesh, everyone uses the same modem/radio settings at the event. The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other's mesh out (one big happy mesh family). Messages only get repeated by other Meshtastic devices if you're all using the same LoRa modem / Radio settings (eg, same region, same frequency slot, same speed etc). See more [here](https://meshtastic.org/docs/configuration/tips/#rebroadcast-public-traffic).
+For the most effective mesh, every node at the event uses the same modem/radio settings. The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other's mesh out (one big happy mesh family). Messages only get repeated by other Meshtastic devices if you're all using the same LoRa modem / Radio settings (eg, same region, same frequency slot, same speed etc). See more [here](https://meshtastic.org/docs/configuration/tips/#rebroadcast-public-traffic).
 
 ### Device Roles
 - CLIENT: For almost ALL nodes.
