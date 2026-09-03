@@ -40,7 +40,7 @@ You use the messaging function from the Meshtastic app on your phone.
 - [Meshtastic from F-Droid App Store](https://f-droid.org/en/packages/com.geeksville.mesh)
 
 ## Shared Configuration 
-  **(To The Benefit Of All)**
+  **(Recommended Configuration, To The Benefit Of All)**
 As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own. 
 
 For the most effective mesh, **every node at the event uses the same modem/radio settings**. The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other out. Messages only get repeated by other Meshtastic devices if you're all using the same LoRa modem / Radio settings (eg, same region, same frequency slot, same speed etc). See more [here](https://meshtastic.org/docs/configuration/tips/#rebroadcast-public-traffic).
@@ -61,7 +61,7 @@ For the most effective mesh, **every node at the event uses the same modem/radio
 ### Recommended Settings
 For the highest certainty that your messages will be delivered at your event, use the following settings...
 
- > **Why these settings?** ... 100+ nodes is approaching the limit of the default "LongFast" preset. At festivals/events, you can expect to see a high density of nodes in a small geographic area. So with that, range is less of a concern and congestion becomes the main concern. Use the following settings to overcome the limitations of the default "LongFast" preset.
+ > **Why these settings?** ... At festivals/events, you can expect to see a high density of nodes in a small geographic area, whereby range becomes far less of a concern than network congestion. The following settings help us to overcome the congestion limitations of the default "LongFast" preset. (~100 nodes is approaching the limit of the default "LongFast" preset, where congestion becomes problematic - we expect to see more than ~100 nodes!).
 
 
 **LORA CONFIG**
