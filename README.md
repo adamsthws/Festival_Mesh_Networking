@@ -61,12 +61,11 @@ For the most effective mesh, **every node at the event uses the same modem/radio
 ### Recommended Settings
 For the highest certainty that your messages will be delivered at your event, use the following settings...
 
-  **Why these settings?**
-  100+ nodes is approaching the limit of the default "LongFast" preset. At festivals/events, you can expect to see a high density of nodes in a small geographic area. So with that, range is less of a concern and congestion becomes the main concern. Use the following settings to overcome the limitations of the default "LongFast" preset.
+ > **Why these settings?** ... 100+ nodes is approaching the limit of the default "LongFast" preset. At festivals/events, you can expect to see a high density of nodes in a small geographic area. So with that, range is less of a concern and congestion becomes the main concern. Use the following settings to overcome the limitations of the default "LongFast" preset.
 
-> Note: If a setting isn't in this list, leave it at its default.
 
 **LORA CONFIG**
+> Note: If a setting isn't in this list, leave it at its default.
 
 | Setting | Value | Notes |
 |---|---|---|
@@ -83,6 +82,7 @@ For the highest certainty that your messages will be delivered at your event, us
 | OK to MQTT | OFF | We don't need MQTT |
 
 **USER CONFIG**
+> Note: If a setting isn't in this list, leave it at its default.
 
 | Setting | Value | Notes |
 |---|---|---|
@@ -90,6 +90,7 @@ For the highest certainty that your messages will be delivered at your event, us
 | Short Name | -Set your short name- | Set your name so your friends can differentiate you |
 
 **POSITION CONFIG**
+> Note: If a setting isn't in this list, leave it at its default.
 
 Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
 
