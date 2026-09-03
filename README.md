@@ -14,11 +14,11 @@ Guide to Meshtastic setup for Festivals/Events
 ## Description
 Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Think: Off-Grid WhatsApp messaging that actually works! This guide helps you configure and operate your off-grid mesh communications network, specifically with devices and settings that have been battle tested at festivals and events. It's been successfully tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly.
 
-### Community guide (very unofficial)
-- The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This is a quick-start guide if you just want to get you and your friends up and running quickly for an event/festival.
+### This is a community guide (very unofficial)
+- The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This is a quick-start guide if you want to get you and your friends up and running quickly for an event/festival without having to wade through and understand the dense official documentation.
 - This is a place to co-ordinate, share configuration, ask the community for help.
 - See [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions) to ask (and kindly answer) questions. 
-- Your contributions are very welcome here!
+- Your contributions are welcome here!
 
 ## What you need
 
@@ -32,7 +32,6 @@ Each person in your group will need their own companion device paired with the M
 - [Rak Wizmesh Tag](https://store.rakwireless.com/products/wismesh-tag-meshtastic-gps-lora-tracker-ip66) (Better | Newer)
 - **[Seeed X1 Tracker](https://wiki.seeedstudio.com/meshtracker_x1_intro/) (Best | Newest**)
 
-
 ### App (free)
 You connect your phone to your companion device over Bluetooth. 
 You use the messaging function from the Meshtastic app on your phone.
@@ -40,11 +39,11 @@ You use the messaging function from the Meshtastic app on your phone.
 - [Meshtastic from Google Play Store](https://play.google.com/store/apps/details?id=com.geeksville.mesh)
 - [Meshtastic from F-Droid App Store](https://f-droid.org/en/packages/com.geeksville.mesh)
 
-## Shared Configuration
-Please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own.
+## Shared Configuration 
+  **(To The Benefit Of All)**
+As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own. 
 
-### Coordinate on your mesh settings
-For the most effective mesh, every node at the event uses the same modem/radio settings. The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other's mesh out (one big happy mesh family). Messages only get repeated by other Meshtastic devices if you're all using the same LoRa modem / Radio settings (eg, same region, same frequency slot, same speed etc). See more [here](https://meshtastic.org/docs/configuration/tips/#rebroadcast-public-traffic).
+For the most effective mesh, **every node at the event uses the same modem/radio settings**. The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other out. Messages only get repeated by other Meshtastic devices if you're all using the same LoRa modem / Radio settings (eg, same region, same frequency slot, same speed etc). See more [here](https://meshtastic.org/docs/configuration/tips/#rebroadcast-public-traffic).
 
 ### Device Roles
 - CLIENT: For almost ALL nodes.
@@ -59,11 +58,12 @@ For the most effective mesh, every node at the event uses the same modem/radio s
 #### All other roles
 - Ignore them, they aren't relevant for festivals/events.
 
-### Overcoming Network Congestion
-100+ nodes is approaching the limit of the default "LongFast" preset. At festivals/events, you should expect to a high density of nodes in a small geographic area. So with that, range is less of a concern and congestion becomes the main concern. Use the following settings to overcome the limitations of the default "LongFast" preset.
-
 ### Recommended Settings
-For the highest certainty that your messages will be delivered at your event, use these settings.
+For the highest certainty that your messages will be delivered at your event, use the following settings...
+
+  **Why these settings?**
+  100+ nodes is approaching the limit of the default "LongFast" preset. At festivals/events, you can expect to see a high density of nodes in a small geographic area. So with that, range is less of a concern and congestion becomes the main concern. Use the following settings to overcome the limitations of the default "LongFast" preset.
+
 > Note: If a setting isn't in this list, leave it at its default.
 
 **LORA CONFIG**
