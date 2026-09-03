@@ -73,11 +73,10 @@ For the highest certainty that your messages will be delivered at your event, us
 | Preset | Medium-Fast | "Medium Range - Fast" handles far more nodes than the default Long-Fast preset before becoming congested - see [Presets Documentation](https://meshtastic.org/docs/overview/radio-settings/#presets) |
 | Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
 | Frequency Slot | 0 | 0 = default |
-| Number of Hops | 3 | 3 = default |
+| Number of Hops | 3 | 3 = default (Really, 3 is fine) |
 | Ignore MQTT | ON | We don't need MQTT |
 | OK to MQTT | OFF | We don't need MQTT |
-| Transmit Enabled | ON | |
-| Coding Rate | 4/5 | "Medium Fast" = 4/5 (Preset Default) |
+| Coding Rate | 4/5 | "Medium Fast" Preset Default = 4/5 |
 | RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
 | User config | -Set your name- | Set your 'Long Name' and 'Short Name' so everyone knows who you are in your channel |
 
