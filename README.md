@@ -64,32 +64,41 @@ For the most effective mesh, every node at the event uses the same modem/radio s
 
 ### Recommended Settings
 For the highest certainty that your messages will be delivered at your event, use these settings.
-
 > Note: If a setting isn't in this list, leave it at its default.
+
+**LORA CONFIG**
 
 | Setting | Value | Notes |
 |---|---|---|
 | Country/Region | Europe 868mhz | For UK / Europe |
-| Preset | Medium-Fast | "Medium Range - Fast" handles far more nodes than the default Long-Fast preset before becoming congested - see [Presets Documentation](https://meshtastic.org/docs/overview/radio-settings/#presets) |
-| Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
+| Preset | Short-Fast | "Short Range - Fast" handles far more nodes than the default Long-Fast preset before becoming congested - see [Presets Documentation](https://meshtastic.org/docs/overview/radio-settings/#presets) |
+| Follow Preset Coding Rate | ON | "Short Fast" Preset Default = 4/5 |
+| Number of Hops | 3 | 3 = default (Truly, 3 is fine here) |
 | Frequency Slot | 0 | 0 = default |
-| Number of Hops | 3 | 3 = default (Really, 3 is fine) |
+| RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
+| Frequency Override | OFF / 0 | leave as default |
+| Transmit Power | MAX | This varies from device to device. Use the maximum available |
+| Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
 | Ignore MQTT | ON | We don't need MQTT |
 | OK to MQTT | OFF | We don't need MQTT |
-| Coding Rate | 4/5 | "Medium Fast" Preset Default = 4/5 |
-| RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
-| User config | -Set your name- | Set your 'Long Name' and 'Short Name' so everyone knows who you are in your channel |
 
-**Position config**
+**USER CONFIG**
+
+| Setting | Value | Notes |
+|---|---|---|
+| Long Name | -Set your long name- | Set your name so your friends can differentiate you |
+| Short Name | -Set your short name- | Set your name so your friends can differentiate you |
+
+**POSITION CONFIG**
 
 Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
 
-| Setting | Value |
-|---|---|
-| Smart Position | ON |
-| Minimum Interval | 5 Mins |
-| Minimum Distance | 30 Metres |
-| Device GPS Update Interval | 5 Mins |
+| Setting | Value | Notes |
+|---|---|---|
+| Smart Position | ON | Only sends a position update when the distance/time thresholds below are met, instead of every fixed interval - reduces channel congestion |
+| Minimum Interval | 5 Mins | Won't send a position update more often than this, even if moving |
+| Minimum Distance | 30 Metres | Won't send a position update unless you've moved at least this far since the last one |
+| Device GPS Update Interval | 5 Mins | How often the GPS chip itself takes a fix; keep in line with Minimum Interval so a fix is ready when Smart Position wants to send |
 
 ## Channel Setup
 Meshtastic is multi-channel (in the same way you might have multiple WhatsApp groups)
@@ -99,7 +108,7 @@ Meshtastic is multi-channel (in the same way you might have multiple WhatsApp gr
 
 ### Easiest Channel Setup
 (A single private channel, no public channel):
-- Delete the default channel (This has no encryption, so intentionally, location sharing doesn't work)
+- Delete the default public channel (This has no encryption, location sharing doesn't work)
 - Add a new channel, name it, enable encryption (key size: 256-bit). (This will be your primary, private channel. Location sharing works)
 - (Optional): On your new private, primary channel, enable [`Position Requests` and `Precise Location`](https://meshtastic.org/docs/configuration/radio/channels/#position-precision)
 - MQTT: Uplink & Downlink: OFF
