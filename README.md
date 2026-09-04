@@ -1,5 +1,5 @@
-# Festival Mesh Networking
-Guide to Meshtastic setup for Festivals/Events
+# Festival Mesh Networking Guide (Using Meshtastic)
+(Enables off-grid Festival/Event communication between friends)
 ![Mesh Network Visualization](assets/mesh_network_visualization.png)
 
 ## Contents
@@ -12,7 +12,9 @@ Guide to Meshtastic setup for Festivals/Events
 - [Future additions](#future-additions)
 
 ## Description
-Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Think: Off-Grid WhatsApp messaging that actually works! This guide helps you configure and operate your off-grid mesh communications network, specifically with devices and settings that have been battle tested at festivals and events. It's been successfully tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly.
+Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Think: Off-Grid WhatsApp messaging that actually works! (Community networks have shown communication over hundreds of kilometers by relaying messages, using inexpensive devices, and without using any traditional mobile phone infrastructure).
+
+This guide helps you configure and operate your off-grid mesh communications network, specifically with devices and settings that have been battle tested at festivals and events. It's been successfully tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly.
 
 ### This is a community guide (very unofficial)
 - The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This is a quick-start guide if you want to get you and your friends up and running quickly for an event/festival without having to wade through and understand the dense official documentation.
