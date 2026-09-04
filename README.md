@@ -53,15 +53,14 @@ For the highest certainty that your messages will be delivered reliably at your 
 ### Device Roles
 - `CLIENT` - For almost ALL nodes (any node that you carry around with you).
 - `CLIENT_BASE` - For nodes on top of your camper van / tent / venue.
+- `ALL_OTHER_ROLES` - Ignore them, they almost certainly aren't relevant for festivals/events.
 
-#### Avoid ROUTER/REPEATER mode
+#### Avoid ROUTER/REPEATER Role
 - Really! You could be hurting the network by adding more router nodes: [Avoid ROUTER/REPEATER mode](https://meshtastic.org/docs/configuration/tips/#avoid-routerand-repeater)
 > - If at Shambala Festival (UK) - Router nodes have already been placed, you don't need any additional router nodes here.
 > - ONLY for EXCEPTIONALLY well-sited nodes (eg: Nodes 20+ metres up, central, on a TALL mast / in a TALL tree).
 > - Too many (or poorly placed) ROUTER nodes will cause network issues. (Official documentation reccomends that you only use ROUTER/REPEATER mode if you understand what what the impications are of this mode).
 
-#### All Other Roles
-- Ignore them, they aren't relevant for festivals/events. 
 
 **LORA CONFIG**
 > Note: If a setting isn't in this list, leave it at its default.
