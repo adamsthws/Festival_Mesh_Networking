@@ -12,7 +12,7 @@
 - [Future additions](#future-additions)
 
 ## Description
-Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Think: Off-Grid WhatsApp messaging that actually works! (Community networks have shown communication over hundreds of kilometers by relaying messages, using inexpensive devices, and without using any traditional mobile phone infrastructure).
+Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Think: Off-Grid WhatsApp messaging that actually works! (Community Meshtastic networks have successfully communicated over hundreds of kilometers by relaying messages, using inexpensive devices, and without using any traditional mobile phone infrastructure).
 
 This guide helps you configure and operate your off-grid mesh communications network, specifically with devices and settings that have been battle tested at festivals and events. It's been successfully tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly.
 
