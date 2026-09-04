@@ -42,7 +42,7 @@ Each person in your group will need their own companion device paired with the M
 
 ## Shared Configuration 
 #### (Recommended Settings, To The Benefit Of All)
-For the highest certainty that your messages will be delivered reliably at your event, use the following settings...
+For the highest certainty that your messages will be delivered reliably at your event, use the settings below...
 
 > **For the most effective mesh: every node at the event uses the same modem/radio settings**... The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other out. This only works if we're all using the same LoRa modem / Radio settings (eg, same region, same same preset, same frequency slot etc).
 
