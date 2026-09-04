@@ -18,7 +18,7 @@ This guide helps you configure and operate your off-grid mesh communications net
 - The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This is a quick-start guide if you want to get you and your friends up and running quickly for an event/festival without having to wade through and understand the dense official documentation.
 - This is a place to co-ordinate, share configuration, ask the community for help.
 - See [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions) to ask (and kindly answer) questions. 
-- Your contributions are welcome here!
+> - Your contributions are welcome here!
 
 ## What you need
 
@@ -57,8 +57,11 @@ For the highest certainty that your messages will be delivered reliably at your 
 
 #### Avoid ROUTER/REPEATER Role
 - Really! You could be hurting the network by adding router nodes: [Avoid ROUTER/REPEATER mode](https://meshtastic.org/docs/configuration/tips/#avoid-routerand-repeater)
+
 > - If at Shambala Festival (UK) - Router nodes have already been placed, you don't need any additional router nodes here.
+
 > - ONLY for EXCEPTIONALLY well-sited nodes (eg: Nodes 20+ metres up, central, on a TALL mast / in a TALL tree).
+
 > - Too many (or poorly placed) ROUTER nodes will cause network issues. (Official documentation reccomends that you only use ROUTER/REPEATER mode if you understand what what the impications are of this mode).
 
 
@@ -89,6 +92,7 @@ For the highest certainty that your messages will be delivered reliably at your 
 
 **POSITION CONFIG**
 > Note: If a setting isn't in this list, leave it at its default.
+
 > Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
 
 | Setting | Value | Notes |
