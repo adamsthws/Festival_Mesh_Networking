@@ -51,7 +51,7 @@ For the highest certainty that your messages will be delivered reliably at your 
  > **Note**... As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own. 
 
 ### Device Roles
-- `CLIENT` For almost ALL nodes.
+- `CLIENT` For almost ALL nodes (any node that you carry around with you).
 - `CLIENT_BASE` for nodes on top of your camper van / tent / venue.
 
 #### Avoid ROUTER/REPEATER mode
