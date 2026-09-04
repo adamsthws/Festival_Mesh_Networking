@@ -5,9 +5,7 @@
 ## Contents
 - [Description](#description)
 - [What you need](#what-you-need)
-- [Shared Configuration](#shared-configuration)
-  - [Device Roles](#device-roles)
-  - [Recommended Settings](#recommended-settings)
+- [Shared-Recommended Configuration](#shared-configuration)
 - [Channel Setup](#channel-setup)
 - [Future additions](#future-additions)
 
