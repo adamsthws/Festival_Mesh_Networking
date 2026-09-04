@@ -35,38 +35,35 @@ Each person in your group will need their own companion device paired with the M
 - [Seeed X1 Tracker](https://wiki.seeedstudio.com/meshtracker_x1_intro/) **(Best | Newest | Released 2026 )**
 
 ### App (free)
-You connect your phone to your companion device over Bluetooth. 
-You use the messaging function from the Meshtastic app on your phone.
+>You connect your phone to your companion device over Bluetooth. You use the messaging function from the Meshtastic app on your phone.
 
-**Get The Meshtastic App From:**
+#### Get The Meshtastic App From...
 - [Apple App Store](https://apps.apple.com/gb/app/meshtastic/id1586432531)
 - [Google Play Store](https://play.google.com/store/apps/details?id=com.geeksville.mesh)
 - [F-Droid App Store](https://f-droid.org/en/packages/com.geeksville.mesh)
 
 ## Shared Configuration 
-  **(Recommended Configuration, To The Benefit Of All)**
-As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own. 
+**(Recommended Settings, To The Benefit Of All)**
+For the highest certainty that your messages will be delivered reliably at your event, use the following settings...
 
-For the most effective mesh, **every node at the event uses the same modem/radio settings**. The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other out. Messages only get repeated by other Meshtastic devices if you're all using the same LoRa modem / Radio settings (eg, same region, same frequency slot, same speed etc). See more [here](https://meshtastic.org/docs/configuration/tips/#rebroadcast-public-traffic).
+> **For the most effective mesh: every node at the event uses the same modem/radio settings**... The intention of this repo is to give everyone a reference for settings/configuration so that we all help each other out. This only works if we're all using the same LoRa modem / Radio settings (eg, same region, same same preset, same frequency slot etc).
+
+ > **Why these settings specifically?**... At festivals/events, you can expect to see a high density of nodes in a small geographic area, whereby range becomes far less of a concern than network congestion. (~100 nodes is approaching the limit of the default "LongFast" preset, where congestion becomes problematic - we expect to see more than ~100 nodes, so the following settings help us to overcome the congestion limitations of the default "LongFast" preset!).
+
+ > **Note**... As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own. 
 
 ### Device Roles
-- CLIENT: For almost ALL nodes.
-- CLIENT_BASE: for nodes on top of your camper van / tent / venue.
+- `CLIENT` For almost ALL nodes.
+- `CLIENT_BASE` for nodes on top of your camper van / tent / venue.
 
-#### ROUTER/REPEATER mode
+#### Avoid ROUTER/REPEATER mode
 - [Avoid ROUTER/REPEATER mode](https://meshtastic.org/docs/configuration/tips/#avoid-routerand-repeater)
 - ONLY for EXCEPTIONALLY well-sited nodes (eg: Nodes 20+ metres up, central, on a TALL mast / in a TALL tree).
 - Too many (or poorly placed) ROUTER nodes will cause network issues. (Official documentation reccomends that you only use ROUTER/REPEATER mode if you understand what what the impications are of this mode).
 - If at Shambala Festival (UK) - Router nodes have already been placed, you don't need any additional router nodes here.
 
-#### All other roles
-- Ignore them, they aren't relevant for festivals/events.
-
-### Recommended Settings
-For the highest certainty that your messages will be delivered at your event, use the following settings...
-
- > **Why these settings?** ... At festivals/events, you can expect to see a high density of nodes in a small geographic area, whereby range becomes far less of a concern than network congestion. The following settings help us to overcome the congestion limitations of the default "LongFast" preset. (~100 nodes is approaching the limit of the default "LongFast" preset, where congestion becomes problematic - we expect to see more than ~100 nodes!).
-
+#### All Other Roles
+- Ignore them, they aren't relevant for festivals/events. 
 
 **LORA CONFIG**
 > Note: If a setting isn't in this list, leave it at its default.
