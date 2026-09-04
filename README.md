@@ -30,9 +30,9 @@ Cost: circa £30-£40 each
 ![Seeed X1 Tracker](assets/seeed_x1_tracker.png)
 
 Each person in your group will need their own companion device paired with the Meshtastic app on their phone. Recommended festival companion devices are:
-- [Seeed T1000e](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) (Good | Older)
-- [Rak Wizmesh Tag](https://store.rakwireless.com/products/wismesh-tag-meshtastic-gps-lora-tracker-ip66) (Better | Newer)
-- **[Seeed X1 Tracker](https://wiki.seeedstudio.com/meshtracker_x1_intro/) (Best | Newest**)
+- [Seeed T1000e](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) (Good | Older | released 2024 )
+- [Rak Wizmesh Tag](https://store.rakwireless.com/products/wismesh-tag-meshtastic-gps-lora-tracker-ip66) (Better | Newer | released 2025 )
+- **[Seeed X1 Tracker](https://wiki.seeedstudio.com/meshtracker_x1_intro/) (Best | Newest | released 2026 )
 
 ### App (free)
 You connect your phone to your companion device over Bluetooth. 
