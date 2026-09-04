@@ -89,8 +89,7 @@ For the highest certainty that your messages will be delivered reliably at your 
 
 **POSITION CONFIG**
 > Note: If a setting isn't in this list, leave it at its default.
-
-Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
+> Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
 
 | Setting | Value | Notes |
 |---|---|---|
