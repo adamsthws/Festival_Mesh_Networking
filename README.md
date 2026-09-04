@@ -37,9 +37,11 @@ Each person in your group will need their own companion device paired with the M
 ### App (free)
 You connect your phone to your companion device over Bluetooth. 
 You use the messaging function from the Meshtastic app on your phone.
-- [Meshtastic from Apple App Store](https://apps.apple.com/gb/app/meshtastic/id1586432531)
-- [Meshtastic from Google Play Store](https://play.google.com/store/apps/details?id=com.geeksville.mesh)
-- [Meshtastic from F-Droid App Store](https://f-droid.org/en/packages/com.geeksville.mesh)
+
+**Get The Meshtastic App From:**
+- [Apple App Store](https://apps.apple.com/gb/app/meshtastic/id1586432531)
+- [Google Play Store](https://play.google.com/store/apps/details?id=com.geeksville.mesh)
+- [F-Droid App Store](https://f-droid.org/en/packages/com.geeksville.mesh)
 
 ## Shared Configuration 
   **(Recommended Configuration, To The Benefit Of All)**
