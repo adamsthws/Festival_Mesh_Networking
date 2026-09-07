@@ -12,19 +12,29 @@
 ## DESCRIPTION
 Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Meshtastic networks use inexpensive devices to enable off-grid communication with total independance from traditional mobile phone infrastructure. Think: Off-Grid WhatsApp messaging that actually works!
 
-- It aim of this guide is to provide sensible settings that you don't need to think about or understand... The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This quick-start guide helps you and your friends get up and running quickly without wading through the dense official documentation.
+#### Goals
+The aim of this guide is to:
 
-- The following settings and devices have been battle tested at festivals and events. (Tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly).
+- Provide sensible settings that you don't need to think about or understand.
 
-- To ask for help, see: [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions).
+- A shared mesh configuration to the benefit of everyone (shared settings that are optimised for the festival).
+
+- Provide guidance on buying the right devices.
+
+
+> The [Official Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This quick-start guide helps you and your friends get up and running quickly without ahving to wade through the dense documentation.
+
+#### Proven
+The following settings and devices have been battle tested at festivals and events. (Tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic has proven to work flawlessly).
 
 ---
 
 ## WHAT YOU NEED
+Companion device + accompanying Meshtastic App...
 
-#### Companion Device
+### Companion Device
 ![Seeed X1 Tracker](assets/seeed_x1_tracker.png)
-> Each person in your group will need their own companion device paired with the Meshtastic app on their phone. (Cost: circa £30-£40 each).
+Each person in your group will need their own companion device paired with the Meshtastic app on their phone. (Cost: circa £30-£40 each).
 
 Recommended festival companion devices are:
 - [Seeed T1000e](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) (Good | Older | Released 2024 )
@@ -32,34 +42,37 @@ Recommended festival companion devices are:
 - [Seeed X1 Tracker](https://wiki.seeedstudio.com/meshtracker_x1_intro/) **(Best | Newest | Released 2026 )**
 
 ### Meshtastic App
-> You connect your phone to your companion device over Bluetooth. You use the messaging function from the Meshtastic app on your phone.
+You will connect your phone to your companion device over Bluetooth. You will configure settings and use the messaging/location function all from the Meshtastic app on your phone.
 
-#### Get The App From...
 - [Apple App Store](https://apps.apple.com/gb/app/meshtastic/id1586432531)
 - [Google Play Store](https://play.google.com/store/apps/details?id=com.geeksville.mesh)
 - [F-Droid App Store](https://f-droid.org/en/packages/com.geeksville.mesh)
 
+
 ---
 
-## SHARED CONFIGURATION
+## CONFIGURATION
 **Recommended Settings, To The Benefit Of All**
 
-> **For the most effective mesh**, and the highest certainty that your messages will be delivered reliably, every node at the event uses the same modem/radio settings**... The intention of this guide is to give everyone a reference for settings/configuration so that we're all on **ONE** shared mesh (all contributing to, and benefiting from it together)... This only works if we're all using the same LoRa modem / Radio settings (e.g., same region, same same preset, same frequency slot etc).
+**For the most effective mesh**, and the highest certainty that your messages will be delivered reliably, every node at the event uses the same modem/radio settings**... The intention of this guide is to give everyone a reference for settings/configuration so that we're all on **ONE** shared mesh (all contributing to, and benefiting from it together)... This only works if we're all using the same LoRa modem / Radio settings (e.g., same region, same same preset, same frequency slot etc).
 
- > **Why these settings specifically?**... At festivals/events, you can expect to see a high density of nodes in a small geographic area, whereby range becomes far less of a concern than network congestion. (~60 nodes is approaching the limit of the default "LongFast" preset, where congestion becomes problematic - at a festival we expect to see far more nodes than this, so we must choose settings that overcome the congestion limitations of the default "LongFast" preset!). 
+ **Why these settings specifically?**... At festivals/events, you can expect to see a high density of nodes in a small geographic area, whereby range becomes far less of a concern than network congestion. (~60 nodes is approaching the limit of the default "LongFast" preset, where congestion becomes problematic - at a festival we expect to see far more nodes than this, so we must choose settings that overcome the congestion limitations of the default "LongFast" preset!). 
 
  > **Note**... As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience (including your own).
 
-### QUICK TIPS
+### QUICK CONFIG TIPS
 
-> Device PIN: 123456 - (The default pin when first connecting to your companion device).
+- **If a setting isn't in this guide, leave it at its default**  
+  Whole sections of settings are omitted from this guide (e.g., 'SECURITY', 'NETWORK', 'POWER') as they should be left alone (with default settings).
 
-> Each time you hit 'Save' your device will restart. Your app may become (temporarily) greyed out during the restart - this is normal.
+- **Device PIN: 123456**  
+  The default pin when first connecting to your companion device.
 
-> Settings are stored on the companion device, not on your phone, so you can setup multiple devices from one phone (e.g., preconfigure them for your friends before handing them out).
+- Each time you hit 'Save' your device will restart. Your app may become (temporarily) greyed out during the restart - this is normal.
 
-> If a setting isn't in this guide, leave it at its default. 
-> Whole sections of settings are omitted from this guide (e.g., 'SECURITY', 'NETWORK', 'POWER') as they should be left untouched / with default settings.
+- Settings are stored on the companion device, not on your phone, so you can setup multiple devices from one phone (e.g., preconfigure them for your friends before handing them out).
+
+- To ask for help, see: [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions).
 
 ### LORA CONFIG
 
@@ -77,7 +90,6 @@ Recommended festival companion devices are:
 | RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
 | Frequency Override | OFF / 0 | leave as default |
 | Transmit Power | MAX | This varies from device to device. Use the maximum available |
-> If a setting isn't in this list, leave it at its default.
 
 ### USER CONFIG
 
@@ -87,7 +99,6 @@ Recommended festival companion devices are:
 | Short Name | -set-your-short-name- | Allows your friends to differentiate you from each other |
 | Unmessagable | OFF | |
 | Licenced Operator | OFF | |
-> If a setting isn't in this list, leave it at its default.
 
 ### DEVICE CONFIG
 
@@ -95,7 +106,6 @@ Recommended festival companion devices are:
 |---|---|---|
 | Device Role | CLIENT | (see more below) |
 | Rebroadcast Mode | Core Portnums Only | Reduces congestion - only rebroadcasts standard packets (NodeInfo, Text, Position, Telemetry, and Routing packets) |
-> If a setting isn't in this list, leave it at its default.
 
 > #### Device Role
 > - `CLIENT` - For almost ALL nodes. (Any node that you carry around with you).
@@ -112,7 +122,7 @@ Recommended festival companion devices are:
 ### CHANNEL CONFIG
 Meshtastic can be multi-channel (in the same way you might have multiple WhatsApp groups). I reccomend you configure two channels (One public, and one private)...
 
-#### PUBLIC CHANNEL 
+#### Public Channel
   i.e., message everyone within range
   You should have this channel by default, just tweak the settings...
 > This channel should appear as 'Primary Channel' / Channel '0'
@@ -127,9 +137,8 @@ Meshtastic can be multi-channel (in the same way you might have multiple WhatsAp
 | Precise Location | OFF | You *MUST DISABLE* location on the public channel for it to work properly on the private channel|
 | MQTT Uplink | OFF | We don't need MQTT |
 | MQTT Downlink | OFF | We don't need MQTT |
-> If a setting isn't in this list, leave it at its default.
 
-#### PRIVATE CHANNEL 
+#### Private Channel
   i.e., a private WhatsApp group between only you and your friends
 > This channel should appear as 'Secondary Channel' / Channel '1'
 
@@ -143,9 +152,8 @@ Meshtastic can be multi-channel (in the same way you might have multiple WhatsAp
 | Precise Location | ON (optional) | Shares exact rather than approximate position |
 | MQTT Uplink | OFF | We don't need MQTT |
 | MQTT Downlink | OFF | We don't need MQTT |
-> If a setting isn't in this list, leave it at its default.
 
-#### SHARE YOUR CHANNEL(s)
+#### Share Your Channel(s)
 
 Each person in your group must add the channel(s) to thier device. The easiest way to do this is: `SETTINGS` > `SHARE QR CODE`
 
@@ -163,7 +171,6 @@ Each person in your group must add the channel(s) to thier device. The easiest w
 | Device GPS Update Interval | 5 Mins | How often the GPS chip itself takes a fix; keep in line with Minimum Interval so a fix is ready when Smart Position wants to send |
 | Position Flags | Default | No need to change these |
 | Adanced Device GPS | Default | No need to change these |
-> If a setting isn't in this list, leave it at its default.
 
 ---
 
