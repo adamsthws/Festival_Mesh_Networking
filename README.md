@@ -10,14 +10,13 @@
 ---
 
 ## DESCRIPTION
-Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Think: Off-Grid WhatsApp messaging that actually works! Meshtastic networks enable off-grid communication, using inexpensive devices and without traditional mobile phone infrastructure.
+Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Meshtastic networks use inexpensive devices to enable off-grid communication with total independance from traditional mobile phone infrastructure. Think: Off-Grid WhatsApp messaging that actually works!
 
-This guide helps you configure and operate your off-grid mesh communications network, specifically with devices and settings that have been battle tested at festivals and events. It's been successfully tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly.
+- It aim of this guide is to provide sensible settings that you don't need to think about or understand... The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This quick-start guide helps you and your friends get up and running quickly without wading through the dense official documentation.
 
-### This is a community guide (very unofficial)
-- The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This is a quick-start guide if you want to get you and your friends up and running quickly for an event/festival without having to wade through and understand the dense official documentation.
-- This is a place to co-ordinate, share configuration, ask the community for help.
-    See [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions) to ask (and kindly answer) questions. 
+- The following settings and devices have been battle tested at festivals and events. (Tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly).
+
+- To ask for help, see: [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions).
 
 ---
 
