@@ -2,14 +2,16 @@
 (Enables off-grid Festival/Event communication between friends)
 ![Mesh Network Visualization](assets/mesh_network_visualization.png)
 
-## Contents
+## CONTENTS
 - [Description](#description)
 - [What you need](#what-you-need)
 - [Shared-Recommended Configuration](#shared-configuration)
 - [Channel Setup](#channel-setup)
 - [Future additions](#future-additions)
 
-## Description
+---
+
+## DESCRIPTION
 Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Think: Off-Grid WhatsApp messaging that actually works! Meshtastic networks enable off-grid communication, using inexpensive devices and without traditional mobile phone infrastructure.
 
 This guide helps you configure and operate your off-grid mesh communications network, specifically with devices and settings that have been battle tested at festivals and events. It's been successfully tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic works flawlessly.
@@ -19,7 +21,9 @@ This guide helps you configure and operate your off-grid mesh communications net
 - This is a place to co-ordinate, share configuration, ask the community for help.
     See [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions) to ask (and kindly answer) questions. 
 
-## What you need
+---
+
+## WHAT YOU NEED
 
 #### Companion Device
 ![Seeed X1 Tracker](assets/seeed_x1_tracker.png)
@@ -30,15 +34,17 @@ Recommended festival companion devices are:
 - [Rak Wizmesh Tag](https://store.rakwireless.com/products/wismesh-tag-meshtastic-gps-lora-tracker-ip66) (Better | Newer | Released 2025 )
 - [Seeed X1 Tracker](https://wiki.seeedstudio.com/meshtracker_x1_intro/) **(Best | Newest | Released 2026 )**
 
-### App (free)
+### Meshtastic App
 > You connect your phone to your companion device over Bluetooth. You use the messaging function from the Meshtastic app on your phone.
 
-#### Get The Meshtastic App From...
+#### Get The App From...
 - [Apple App Store](https://apps.apple.com/gb/app/meshtastic/id1586432531)
 - [Google Play Store](https://play.google.com/store/apps/details?id=com.geeksville.mesh)
 - [F-Droid App Store](https://f-droid.org/en/packages/com.geeksville.mesh)
 
-## Shared Configuration 
+---
+
+## SHARED CONFIGURATION
 **Recommended Settings, To The Benefit Of All**
 
 > **For the most effective mesh**, and the highest certainty that your messages will be delivered reliably, every node at the event uses the same modem/radio settings**... The intention of this guide is to give everyone a reference for settings/configuration so that we're all on **ONE** shared mesh (all contributing to, and benefiting from it together)... This only works if we're all using the same LoRa modem / Radio settings (e.g., same region, same same preset, same frequency slot etc).
@@ -101,44 +107,46 @@ Recommended festival companion devices are:
 > - ONLY for EXCEPTIONALLY well-sited nodes (e.g., Central location, 20+ metres up, on a TALL mast, with GOOD antennas).
 > - Too many, or poorly placed ROUTER nodes will cause network issues. Official documentation recommends that you only use ROUTER/REPEATER mode if you understand what what the implications are of this mode.
 
-*********
 ### CHANNEL CONFIG
-Meshtastic can be multi-channel (in the same way you might have multiple private WhatsApp groups)
-- A public channel (e.g., everyone within range)
-- A private channel (e.g., a private WhatsApp group between only you and your friends)
-- Multiple private channels to keep different groups of friends separate.
+Meshtastic can be multi-channel (in the same way you might have multiple WhatsApp groups). I reccomend you configure two channels (One public, and one private)...
 
-#### Easiest Channel Setup
-A single private channel, no public channel:
-- Delete the default public channel (This has no encryption, location sharing doesn't work)
-- Add a new channel, name it, enable encryption (key size: 256-bit). (This will be your primary, private channel. Location sharing works)
-- (Optional): On your new private, primary channel, enable [`Position Requests` and `Precise Location`](https://meshtastic.org/docs/configuration/radio/channels/#position-precision)
-- MQTT: Uplink & Downlink: OFF
-- Share your channel with your friends. (`SETTINGS` > `SHARE QR CODE`)
-
-#### Multi-Channel Setup
-Public channel and one (or more) private channels:
-- See official manual [here](https://meshtastic.org/docs/configuration/tips/#sharing-location-on-a-private-secondary-channel)
-******
-
-### CHANNEL CONFIG
-Meshtastic can be multi-channel (in the same way you might have multiple private WhatsApp groups)
-- A public channel (e.g., everyone within range)
-- A private channel (e.g., a private WhatsApp group between only you and your friends)
-- Multiple private channels to keep different groups of friends separate.
+#### PUBLIC CHANNEL 
+  i.e., message everyone within range
+  You should have this channel by default, just tweak the settings...
+> This channel should appear as 'Primary Channel' / Channel '0'
 
 | Setting | Value | Notes |
 |---|---|---|
-| Default Public Channel | Delete | No encryption, and location sharing doesn't work on it |
-| New Private Channel | Add | This becomes your primary, private channel |
-| Channel Name | -Set a name- | So friends know which channel to join |
-| Encryption | ON (256-bit) | Required for location sharing to work |
-| Position Requests | ON (optional) | Lets others on the channel request your position — [docs](https://meshtastic.org/docs/configuration/radio/channels/#position-precision) |
-| Precise Location | ON (optional) | Shares exact rather than approximate position — [docs](https://meshtastic.org/docs/configuration/radio/channels/#position-precision) |
-| MQTT Uplink | OFF | Keeps the channel local to the mesh |
-| MQTT Downlink | OFF | Keeps the channel local to the mesh |
-> This covers the easiest setup: a single private channel, no public channel. Share it with friends via `SETTINGS` > `SHARE QR CODE`.
-> For a public + private multi-channel setup instead, see the [official manual](https://meshtastic.org/docs/configuration/tips/#sharing-location-on-a-private-secondary-channel).
+| Name | -leave-empty- | Don't set a name here, it *MUST BE EMPTY* for the public channel to work properly |
+| Key Size | DEFAULT | |
+| Key | `AQ==` (Default) | *MUST BE `AQ==`* for the public channel to work properly |
+| Channel Role | Primary | |
+| Position Requests | OFF | You *MUST DISABLE* location on the public channel for it to work properly on the private channel |
+| Precise Location | OFF | You *MUST DISABLE* location on the public channel for it to work properly on the private channel|
+| MQTT Uplink | OFF | We don't need MQTT |
+| MQTT Downlink | OFF | We don't need MQTT |
+> If a setting isn't in this list, leave it at its default.
+
+#### PRIVATE CHANNEL 
+  i.e., a private WhatsApp group between only you and your friends
+> This channel should appear as 'Secondary Channel' / Channel '1'
+
+| Setting | Value | Notes |
+|---|---|---|
+| Name | -set-a-name- | Set your group's name |
+| Key Size | 256-bit | Enables encryption & channel privacy |
+| Key | Auto-Generated | Allow the app to auto-generate your key |
+| Channel Role | Secondary | |
+| Position Requests | ON (optional) | Lets others on the channel track your location |
+| Precise Location | ON (optional) | Shares exact rather than approximate position |
+| MQTT Uplink | OFF | We don't need MQTT |
+| MQTT Downlink | OFF | We don't need MQTT |
+> If a setting isn't in this list, leave it at its default.
+
+#### SHARE YOUR CHANNEL(s)
+
+Each person in your group must add the channel(s) to thier device. The easiest way to do this is: `SETTINGS` > `SHARE QR CODE`
+
 
 ### POSITION CONFIG
 
@@ -151,6 +159,8 @@ Meshtastic can be multi-channel (in the same way you might have multiple private
 | Minimum Distance | 30 Metres | Won't send a position update unless you've moved at least this far since the last one |
 | Device GPS Update Interval | 5 Mins | How often the GPS chip itself takes a fix; keep in line with Minimum Interval so a fix is ready when Smart Position wants to send |
 > If a setting isn't in this list, leave it at its default.
+
+---
 
 ## Future additions
 To-Do / Contributions welcome...
