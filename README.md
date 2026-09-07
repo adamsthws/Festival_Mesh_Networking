@@ -21,18 +21,17 @@ This guide helps you configure and operate your off-grid mesh communications net
 
 ## What you need
 
-### Companion Device
-Cost: circa £30-£40 each
-
+#### Companion Device
 ![Seeed X1 Tracker](assets/seeed_x1_tracker.png)
+> Each person in your group will need their own companion device paired with the Meshtastic app on their phone. (Cost: circa £30-£40 each).
 
-Each person in your group will need their own companion device paired with the Meshtastic app on their phone. Recommended festival companion devices are:
+Recommended festival companion devices are:
 - [Seeed T1000e](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) (Good | Older | Released 2024 )
 - [Rak Wizmesh Tag](https://store.rakwireless.com/products/wismesh-tag-meshtastic-gps-lora-tracker-ip66) (Better | Newer | Released 2025 )
 - [Seeed X1 Tracker](https://wiki.seeedstudio.com/meshtracker_x1_intro/) **(Best | Newest | Released 2026 )**
 
 ### App (free)
->You connect your phone to your companion device over Bluetooth. You use the messaging function from the Meshtastic app on your phone.
+> You connect your phone to your companion device over Bluetooth. You use the messaging function from the Meshtastic app on your phone.
 
 #### Get The Meshtastic App From...
 - [Apple App Store](https://apps.apple.com/gb/app/meshtastic/id1586432531)
@@ -46,7 +45,7 @@ Each person in your group will need their own companion device paired with the M
 
  > **Why these settings specifically?**... At festivals/events, you can expect to see a high density of nodes in a small geographic area, whereby range becomes far less of a concern than network congestion. (~60 nodes is approaching the limit of the default "LongFast" preset, where congestion becomes problematic - at a festival we expect to see far more nodes than this, so we must choose settings that overcome the congestion limitations of the default "LongFast" preset!). 
 
- > **Note**... As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own.
+ > **Note**... As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience (including your own).
 
 ### LORA CONFIG
 
@@ -64,7 +63,7 @@ Each person in your group will need their own companion device paired with the M
 | Transmit Power | MAX | This varies from device to device. Use the maximum available |
 | Ignore MQTT | ON | We don't need MQTT |
 | OK to MQTT | OFF | We don't need MQTT |
-> Note: If a setting isn't in this list, leave it at its default.
+> If a setting isn't in this list, leave it at its default.
 
 ### USER CONFIG
 
@@ -72,19 +71,7 @@ Each person in your group will need their own companion device paired with the M
 |---|---|---|
 | Long Name | -Set your long name- | Set your name so your friends can differentiate you |
 | Short Name | -Set your short name- | Set your name so your friends can differentiate you |
-> Note: If a setting isn't in this list, leave it at its default.
-
-### POSITION CONFIG
-
-> Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
-
-| Setting | Value | Notes |
-|---|---|---|
-| Smart Position | ON | Only sends a position update when the distance/time thresholds below are met, instead of every fixed interval - reduces channel congestion |
-| Minimum Interval | 5 Mins | Won't send a position update more often than this, even if moving |
-| Minimum Distance | 30 Metres | Won't send a position update unless you've moved at least this far since the last one |
-| Device GPS Update Interval | 5 Mins | How often the GPS chip itself takes a fix; keep in line with Minimum Interval so a fix is ready when Smart Position wants to send |
-> Note: If a setting isn't in this list, leave it at its default.
+> If a setting isn't in this list, leave it at its default.
 
 ### DEVICE CONFIG
 
@@ -92,7 +79,7 @@ Each person in your group will need their own companion device paired with the M
 |---|---|---|
 | Device Role | CLIENT | (see more below) |
 | Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
-> Note: If a setting isn't in this list, leave it at its default.
+> If a setting isn't in this list, leave it at its default.
 
 > #### Device Role
 > - `CLIENT` - For almost ALL nodes. (Any node that you carry around with you).
@@ -106,13 +93,13 @@ Each person in your group will need their own companion device paired with the M
 > - ONLY for EXCEPTIONALLY well-sited nodes (e.g., Central location, 20+ metres up, on a TALL mast, with GOOD antennas).
 > - Too many, or poorly placed ROUTER nodes will cause network issues. Official documentation recommends that you only use ROUTER/REPEATER mode if you understand what what the implications are of this mode.
 
-## Channel Setup
+### CHANNEL CONFIG
 Meshtastic can be multi-channel (in the same way you might have multiple private WhatsApp groups)
 - A public channel (e.g., everyone within range)
 - A private channel (e.g., a private WhatsApp group between only you and your friends)
 - Multiple private channels to keep different groups of friends separate.
 
-### Easiest Channel Setup
+#### Easiest Channel Setup
 A single private channel, no public channel:
 - Delete the default public channel (This has no encryption, location sharing doesn't work)
 - Add a new channel, name it, enable encryption (key size: 256-bit). (This will be your primary, private channel. Location sharing works)
@@ -120,9 +107,21 @@ A single private channel, no public channel:
 - MQTT: Uplink & Downlink: OFF
 - Share your channel with your friends. (`SETTINGS` > `SHARE QR CODE`)
 
-### Multi-Channel Setup
+#### Multi-Channel Setup
 Public channel and one (or more) private channels:
 - See official manual [here](https://meshtastic.org/docs/configuration/tips/#sharing-location-on-a-private-secondary-channel)
+
+### POSITION CONFIG
+
+> Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
+
+| Setting | Value | Notes |
+|---|---|---|
+| Smart Position | ON | Only sends a position update when the distance/time thresholds below are met, instead of every fixed interval - reduces channel congestion |
+| Minimum Interval | 5 Mins | Won't send a position update more often than this, even if moving |
+| Minimum Distance | 30 Metres | Won't send a position update unless you've moved at least this far since the last one |
+| Device GPS Update Interval | 5 Mins | How often the GPS chip itself takes a fix; keep in line with Minimum Interval so a fix is ready when Smart Position wants to send |
+> If a setting isn't in this list, leave it at its default.
 
 ## Future additions
 To-Do / Contributions welcome...
