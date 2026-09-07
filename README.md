@@ -88,25 +88,23 @@ Each person in your group will need their own companion device paired with the M
 
 ### DEVICE CONFIG
 
-#### Device Role
-- `CLIENT` - For almost ALL nodes. (Any node that you carry around with you).
-- `CLIENT_BASE` - For nodes on top of your camper van / tent / venue. (You probably don't need these at a festival).
-- `ALL_OTHER_ROLES` - Skip these. (These almost certainly aren't relevant for festivals/events).
-
-#### Avoid ROUTER/REPEATER Role
-Really! You could be hurting the network by incorrectly choosing the `ROUTER` or `REPEATER` role. 
-See: [Avoid ROUTER/REPEATER mode](https://meshtastic.org/docs/configuration/tips/#avoid-routerand-repeater)
-
-> - If at Shambala Festival (UK) - Router nodes have already been placed, you don't need any additional router nodes here.
-
-> - ONLY for EXCEPTIONALLY well-sited nodes (e.g., Central location, 20+ metres up, on a TALL mast, with GOOD antennas).
-
-> - Too many, or poorly placed ROUTER nodes will cause network issues. Official documentation recommends that you only use ROUTER/REPEATER mode if you understand what what the implications are of this mode.
-
 | Setting | Value | Notes |
 |---|---|---|
-| Device Role | CLIENT | (see above) |
+| Device Role | CLIENT | (see more below) |
 | Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
+> Note: If a setting isn't in this list, leave it at its default.
+
+> #### Device Role
+> - `CLIENT` - For almost ALL nodes. (Any node that you carry around with you).
+> - `CLIENT_BASE` - For nodes on top of your camper van / tent / venue. (You probably don't need these at a festival).
+> - `ALL_OTHER_ROLES` - Skip these. (These almost certainly aren't relevant for festivals/events).
+
+> #### Avoid ROUTER/REPEATER Role
+> Really! You could be hurting the network by incorrectly choosing the `ROUTER` or `REPEATER` role. 
+> See: [Avoid ROUTER/REPEATER mode](https://meshtastic.org/docs/configuration/tips/#avoid-routerand-repeater)
+> - If at Shambala Festival (UK) - Router nodes have already been placed, you don't need any additional router nodes here.
+> - ONLY for EXCEPTIONALLY well-sited nodes (e.g., Central location, 20+ metres up, on a TALL mast, with GOOD antennas).
+> - Too many, or poorly placed ROUTER nodes will cause network issues. Official documentation recommends that you only use ROUTER/REPEATER mode if you understand what what the implications are of this mode.
 
 ## Channel Setup
 Meshtastic can be multi-channel (in the same way you might have multiple private WhatsApp groups)
