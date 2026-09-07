@@ -47,28 +47,12 @@ For the highest certainty that your messages will be delivered reliably at your 
 > **For the most effective mesh: every node at the event uses the same modem/radio settings**... The intention of this guide is to give everyone a reference for settings/configuration so that we're all on ONE shared mesh (all contributing to, and benefiting from it together)... This only works if we're all using the same LoRa modem / Radio settings (e.g., same region, same same preset, same frequency slot etc).
 
  > **Why these settings specifically?**... At festivals/events, you can expect to see a high density of nodes in a small geographic area, whereby range becomes far less of a concern than network congestion. (~60 nodes is approaching the limit of the default "LongFast" preset, where congestion becomes problematic - at a festival we expect to see far more nodes than this, so we must choose settings that overcome the congestion limitations of the default "LongFast" preset!). 
- 
- > Here's the [official recommendation](https://meshtastic.org/blog/why-your-mesh-should-switch-from-longfast) to switch away from the default "LongFast" preset.
 
  > **Note**... As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience, including your own.
 
-### Device Roles
-- `CLIENT` - For almost ALL nodes. (Any node that you carry around with you).
-- `CLIENT_BASE` - For nodes on top of your camper van / tent / venue. (You probably don't need these at a festival).
-- `ALL_OTHER_ROLES` - Skip these. (These almost certainly aren't relevant for festivals/events).
+### LORA CONFIG
 
-#### Avoid ROUTER/REPEATER Role
-- Really! You could be hurting the network by adding router nodes: [Avoid ROUTER/REPEATER mode](https://meshtastic.org/docs/configuration/tips/#avoid-routerand-repeater)
-
-> - If at Shambala Festival (UK) - Router nodes have already been placed, you don't need any additional router nodes here.
-
-> - ONLY for EXCEPTIONALLY well-sited nodes (e.g., Central location, 20+ metres up, on a TALL mast, with GOOD antennas).
-
-> - Too many, or poorly placed ROUTER nodes will cause network issues. Official documentation recommends that you only use ROUTER/REPEATER mode if you understand what what the implications are of this mode.
-
-
-**LORA CONFIG**
-> Note: If a setting isn't in this list, leave it at its default.
+ > Here's the [official recommendation](https://meshtastic.org/blog/why-your-mesh-should-switch-from-longfast) to switch away from the default "LongFast" preset.
 
 | Setting | Value | Notes |
 |---|---|---|
@@ -80,20 +64,19 @@ For the highest certainty that your messages will be delivered reliably at your 
 | RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
 | Frequency Override | OFF / 0 | leave as default |
 | Transmit Power | MAX | This varies from device to device. Use the maximum available |
-| Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
 | Ignore MQTT | ON | We don't need MQTT |
 | OK to MQTT | OFF | We don't need MQTT |
-
-**USER CONFIG**
 > Note: If a setting isn't in this list, leave it at its default.
+
+### USER CONFIG
 
 | Setting | Value | Notes |
 |---|---|---|
 | Long Name | -Set your long name- | Set your name so your friends can differentiate you |
 | Short Name | -Set your short name- | Set your name so your friends can differentiate you |
-
-**POSITION CONFIG**
 > Note: If a setting isn't in this list, leave it at its default.
+
+### POSITION CONFIG
 
 > Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
 
@@ -103,15 +86,38 @@ For the highest certainty that your messages will be delivered reliably at your 
 | Minimum Interval | 5 Mins | Won't send a position update more often than this, even if moving |
 | Minimum Distance | 30 Metres | Won't send a position update unless you've moved at least this far since the last one |
 | Device GPS Update Interval | 5 Mins | How often the GPS chip itself takes a fix; keep in line with Minimum Interval so a fix is ready when Smart Position wants to send |
+> Note: If a setting isn't in this list, leave it at its default.
+
+### DEVICE CONFIG
+
+#### Device Role
+- `CLIENT` - For almost ALL nodes. (Any node that you carry around with you).
+- `CLIENT_BASE` - For nodes on top of your camper van / tent / venue. (You probably don't need these at a festival).
+- `ALL_OTHER_ROLES` - Skip these. (These almost certainly aren't relevant for festivals/events).
+
+#### Avoid ROUTER/REPEATER Role
+Really! You could be hurting the network by incorrectly choosing the `ROUTER` or `REPEATER` role. 
+See: [Avoid ROUTER/REPEATER mode](https://meshtastic.org/docs/configuration/tips/#avoid-routerand-repeater)
+
+> - If at Shambala Festival (UK) - Router nodes have already been placed, you don't need any additional router nodes here.
+
+> - ONLY for EXCEPTIONALLY well-sited nodes (e.g., Central location, 20+ metres up, on a TALL mast, with GOOD antennas).
+
+> - Too many, or poorly placed ROUTER nodes will cause network issues. Official documentation recommends that you only use ROUTER/REPEATER mode if you understand what what the implications are of this mode.
+
+| Setting | Value | Notes |
+|---|---|---|
+| Device Role | CLIENT | (see above) |
+| Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
 
 ## Channel Setup
-Meshtastic is multi-channel (in the same way you might have multiple WhatsApp groups)
+Meshtastic can be multi-channel (in the same way you might have multiple private WhatsApp groups)
 - A public channel (e.g., everyone within range)
 - A private channel (e.g., a private WhatsApp group between only you and your friends)
 - Multiple private channels to keep different groups of friends separate.
 
 ### Easiest Channel Setup
-(A single private channel, no public channel):
+A single private channel, no public channel:
 - Delete the default public channel (This has no encryption, location sharing doesn't work)
 - Add a new channel, name it, enable encryption (key size: 256-bit). (This will be your primary, private channel. Location sharing works)
 - (Optional): On your new private, primary channel, enable [`Position Requests` and `Precise Location`](https://meshtastic.org/docs/configuration/radio/channels/#position-precision)
@@ -119,7 +125,7 @@ Meshtastic is multi-channel (in the same way you might have multiple WhatsApp gr
 - Share your channel with your friends. (`SETTINGS` > `SHARE QR CODE`)
 
 ### Multi-Channel Setup
-(Public channel and one (or more) private channels):
+Public channel and one (or more) private channels:
 - See official manual [here](https://meshtastic.org/docs/configuration/tips/#sharing-location-on-a-private-secondary-channel)
 
 ## Future additions
