@@ -40,7 +40,7 @@ Each person in your group will need their own companion device paired with the M
 - [F-Droid App Store](https://f-droid.org/en/packages/com.geeksville.mesh)
 
 ## Shared Configuration 
-#### (Recommended Settings, To The Benefit Of All)
+**Recommended Settings, To The Benefit Of All**
 For the highest certainty that your messages will be delivered reliably at your event, use the settings below...
 
 > **For the most effective mesh: every node at the event uses the same modem/radio settings**... The intention of this guide is to give everyone a reference for settings/configuration so that we're all on ONE shared mesh (all contributing to, and benefiting from it together)... This only works if we're all using the same LoRa modem / Radio settings (e.g., same region, same same preset, same frequency slot etc).
