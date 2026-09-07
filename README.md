@@ -3,9 +3,9 @@
 
 ## CONTENTS
 - [Description](#description)
-- [What you need](#what-you-need)
+- [What You Need](#what-you-need)
 - [Recommended Configuration](#shared-configuration)
-- [Future additions](#future-additions)
+- [Future Additions](#future-additions)
 
 ---
 
@@ -90,7 +90,7 @@ Recommended festival companion devices are:
 | Setting | Value | Notes |
 |---|---|---|
 | Device Role | CLIENT | (see more below) |
-| Rebroadcast Mode | Core Portnums Only | Reduces congestion by only rebroadcasting standard packets: NodeInfo, Text, Position, Telemetry, and Routing |
+| Rebroadcast Mode | Core Portnums Only | Reduces congestion - only rebroadcasts standard packets (NodeInfo, Text, Position, Telemetry, and Routing packets) |
 > If a setting isn't in this list, leave it at its default.
 
 > #### Device Role
