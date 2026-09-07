@@ -17,8 +17,7 @@ This guide helps you configure and operate your off-grid mesh communications net
 ### This is a community guide (very unofficial)
 - The official [Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This is a quick-start guide if you want to get you and your friends up and running quickly for an event/festival without having to wade through and understand the dense official documentation.
 - This is a place to co-ordinate, share configuration, ask the community for help.
-- See [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions) to ask (and kindly answer) questions. 
-> - Your contributions are welcome here!
+    See [GitHub Discussions Page](https://github.com/adamsthws/Festival_Mesh_Networking/discussions) to ask (and kindly answer) questions. 
 
 ## What you need
 
