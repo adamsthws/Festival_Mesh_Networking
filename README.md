@@ -41,9 +41,8 @@ Each person in your group will need their own companion device paired with the M
 
 ## Shared Configuration 
 **Recommended Settings, To The Benefit Of All**
-For the highest certainty that your messages will be delivered reliably at your event, use the settings below...
 
-> **For the most effective mesh: every node at the event uses the same modem/radio settings**... The intention of this guide is to give everyone a reference for settings/configuration so that we're all on ONE shared mesh (all contributing to, and benefiting from it together)... This only works if we're all using the same LoRa modem / Radio settings (e.g., same region, same same preset, same frequency slot etc).
+> **For the most effective mesh**, and the highest certainty that your messages will be delivered reliably, every node at the event uses the same modem/radio settings**... The intention of this guide is to give everyone a reference for settings/configuration so that we're all on **ONE** shared mesh (all contributing to, and benefiting from it together)... This only works if we're all using the same LoRa modem / Radio settings (e.g., same region, same same preset, same frequency slot etc).
 
  > **Why these settings specifically?**... At festivals/events, you can expect to see a high density of nodes in a small geographic area, whereby range becomes far less of a concern than network congestion. (~60 nodes is approaching the limit of the default "LongFast" preset, where congestion becomes problematic - at a festival we expect to see far more nodes than this, so we must choose settings that overcome the congestion limitations of the default "LongFast" preset!). 
 
