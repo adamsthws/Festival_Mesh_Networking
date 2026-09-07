@@ -1,12 +1,10 @@
 # Festival Mesh Networking Guide (Using Meshtastic)
-(Enables off-grid Festival/Event communication between friends)
 ![Mesh Network Visualization](assets/mesh_network_visualization.png)
 
 ## CONTENTS
 - [Description](#description)
 - [What you need](#what-you-need)
-- [Shared-Recommended Configuration](#shared-configuration)
-- [Channel Setup](#channel-setup)
+- [Recommended Configuration](#shared-configuration)
 - [Future additions](#future-additions)
 
 ---
@@ -162,7 +160,7 @@ Each person in your group must add the channel(s) to thier device. The easiest w
 
 ---
 
-## Future additions
+## FUTURE ADDITIONS
 To-Do / Contributions welcome...
 
 - **Map overlays** - Each year the festival map changes with the new venue layout. We must obtain the new festival map and overlay it to the correct latitude/longitude within the Meshtastic app - doing so enables you to see the location of your friends, relative to the festival layout.
