@@ -153,14 +153,17 @@ Each person in your group must add the channel(s) to thier device. The easiest w
 
 ### POSITION CONFIG
 
-> Please be considerate when configuring postions settings. The following settings are recommended to be accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
+> Please be considerate when configuring postions settings - Particularly, setting `Minimum Interval` to less than 5mins will flood and overwhelm the network.
 
 | Setting | Value | Notes |
 |---|---|---|
+| Broadcast Interal | One Hour | |
 | Smart Position | ON | Only sends a position update when the distance/time thresholds below are met, instead of every fixed interval - reduces channel congestion |
-| Minimum Interval | 5 Mins | Won't send a position update more often than this, even if moving |
-| Minimum Distance | 30 Metres | Won't send a position update unless you've moved at least this far since the last one |
+| Minimum Interval | 5 Mins | Setting this any lower will cause unnecessary network congestion |
+| Minimum Distance | 10 Metres | Won't send a position update unless you've moved at least this far since the last one |
 | Device GPS Update Interval | 5 Mins | How often the GPS chip itself takes a fix; keep in line with Minimum Interval so a fix is ready when Smart Position wants to send |
+| Position Flags | Default | No need to change these |
+| Adanced Device GPS | Default | No need to change these |
 > If a setting isn't in this list, leave it at its default.
 
 ---
