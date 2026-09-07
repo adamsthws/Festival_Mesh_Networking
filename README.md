@@ -59,6 +59,9 @@ Recommended festival companion devices are:
 
 > Settings are stored on the companion device, not on your phone, so you can setup multiple devices from one phone (e.g., preconfigure them for your friends before handing them out).
 
+> If a setting isn't in this guide, leave it at its default. 
+> Whole sections of settings are omitted from this guide (e.g., 'SECURITY', 'NETWORK', 'POWER') as they should be left untouched / with default settings.
+
 ### LORA CONFIG
 
  > Here's the [official recommendation](https://meshtastic.org/blog/why-your-mesh-should-switch-from-longfast) to switch away from the default "LongFast" preset.
@@ -69,8 +72,8 @@ Recommended festival companion devices are:
 | Preset | Short-Fast | "Short Range - Fast" handles far more nodes than the default Long-Fast preset before becoming congested - see [Presets Documentation](https://meshtastic.org/docs/overview/radio-settings/#presets) |
 | Ignore MQTT | ON | We don't need MQTT |
 | OK to MQTT | OFF | We don't need MQTT |
-| Follow Preset Coding Rate | ON | "Short Fast" Preset Default = 4/5 |
-| Number of Hops | 3 | 3 = default (Truly, 3 is fine here) |
+| Follow Preset Coding Rate | ON | The Short-Fast preset default is: `4/5` |
+| Number of Hops | 3 | 3 = default (Truly, 3 is fine) |
 | Frequency Slot | 0 | 0 = default |
 | RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
 | Frequency Override | OFF / 0 | leave as default |
@@ -81,8 +84,10 @@ Recommended festival companion devices are:
 
 | Setting | Value | Notes |
 |---|---|---|
-| Long Name | -Set your long name- | Set your name so your friends can differentiate you |
-| Short Name | -Set your short name- | Set your name so your friends can differentiate you |
+| Long Name | -set-your-long-name- | Allows your friends to differentiate you from each other |
+| Short Name | -set-your-short-name- | Allows your friends to differentiate you from each other |
+| Unmessagable | OFF | |
+| Licenced Operator | OFF | |
 > If a setting isn't in this list, leave it at its default.
 
 ### DEVICE CONFIG
