@@ -47,6 +47,14 @@ Recommended festival companion devices are:
 
  > **Note**... As we are all sharing the same airwaves, please kindly configure your nodes responsibly and with consideration... If you configure them incorrectly, you will negatively affect everybody's experience (including your own).
 
+### QUICK TIPS
+
+> Device PIN: 123456 - (The default pin when first connecting to your companion device).
+
+> Each time you hit 'Save' your device will restart. Your app may become (temporarily) greyed out during the restart - this is normal.
+
+> Settings are stored on the companion device, not on your phone, so you can setup multiple devices from one phone (e.g., preconfigure them for your friends before handing them out).
+
 ### LORA CONFIG
 
  > Here's the [official recommendation](https://meshtastic.org/blog/why-your-mesh-should-switch-from-longfast) to switch away from the default "LongFast" preset.
@@ -55,14 +63,14 @@ Recommended festival companion devices are:
 |---|---|---|
 | Country/Region | Europe 868mhz | For UK / Europe |
 | Preset | Short-Fast | "Short Range - Fast" handles far more nodes than the default Long-Fast preset before becoming congested - see [Presets Documentation](https://meshtastic.org/docs/overview/radio-settings/#presets) |
+| Ignore MQTT | ON | We don't need MQTT |
+| OK to MQTT | OFF | We don't need MQTT |
 | Follow Preset Coding Rate | ON | "Short Fast" Preset Default = 4/5 |
 | Number of Hops | 3 | 3 = default (Truly, 3 is fine here) |
 | Frequency Slot | 0 | 0 = default |
 | RX Boosted Gain | OFF | Uses more battery when on; not required in a dense network at events |
 | Frequency Override | OFF / 0 | leave as default |
 | Transmit Power | MAX | This varies from device to device. Use the maximum available |
-| Ignore MQTT | ON | We don't need MQTT |
-| OK to MQTT | OFF | We don't need MQTT |
 > If a setting isn't in this list, leave it at its default.
 
 ### USER CONFIG
@@ -93,6 +101,7 @@ Recommended festival companion devices are:
 > - ONLY for EXCEPTIONALLY well-sited nodes (e.g., Central location, 20+ metres up, on a TALL mast, with GOOD antennas).
 > - Too many, or poorly placed ROUTER nodes will cause network issues. Official documentation recommends that you only use ROUTER/REPEATER mode if you understand what what the implications are of this mode.
 
+*********
 ### CHANNEL CONFIG
 Meshtastic can be multi-channel (in the same way you might have multiple private WhatsApp groups)
 - A public channel (e.g., everyone within range)
@@ -110,10 +119,30 @@ A single private channel, no public channel:
 #### Multi-Channel Setup
 Public channel and one (or more) private channels:
 - See official manual [here](https://meshtastic.org/docs/configuration/tips/#sharing-location-on-a-private-secondary-channel)
+******
+
+### CHANNEL CONFIG
+Meshtastic can be multi-channel (in the same way you might have multiple private WhatsApp groups)
+- A public channel (e.g., everyone within range)
+- A private channel (e.g., a private WhatsApp group between only you and your friends)
+- Multiple private channels to keep different groups of friends separate.
+
+| Setting | Value | Notes |
+|---|---|---|
+| Default Public Channel | Delete | No encryption, and location sharing doesn't work on it |
+| New Private Channel | Add | This becomes your primary, private channel |
+| Channel Name | -Set a name- | So friends know which channel to join |
+| Encryption | ON (256-bit) | Required for location sharing to work |
+| Position Requests | ON (optional) | Lets others on the channel request your position — [docs](https://meshtastic.org/docs/configuration/radio/channels/#position-precision) |
+| Precise Location | ON (optional) | Shares exact rather than approximate position — [docs](https://meshtastic.org/docs/configuration/radio/channels/#position-precision) |
+| MQTT Uplink | OFF | Keeps the channel local to the mesh |
+| MQTT Downlink | OFF | Keeps the channel local to the mesh |
+> This covers the easiest setup: a single private channel, no public channel. Share it with friends via `SETTINGS` > `SHARE QR CODE`.
+> For a public + private multi-channel setup instead, see the [official manual](https://meshtastic.org/docs/configuration/tips/#sharing-location-on-a-private-secondary-channel).
 
 ### POSITION CONFIG
 
-> Please be considerate when configuring postions settings. The following settings are recommended - they're accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
+> Please be considerate when configuring postions settings. The following settings are recommended to be accurate enough to find your friends without flooding and overwhelming the network with very frequent updates.
 
 | Setting | Value | Notes |
 |---|---|---|
