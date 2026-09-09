@@ -25,10 +25,11 @@ The aim of this guide is:
   (Get going quickly)
 
 
+> **Official Documentation**
 > The [Official Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This quick-start guide helps you and your friends get up and running quickly without ahving to wade through the dense documentation.
 
-#### Proven
-The following settings and devices have been battle tested at festivals and events. (Tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic has proven to work flawlessly).
+> **Proven**
+> The following settings and devices have been battle tested at festivals and events. (Tested with over 100 nodes at the beautiful Shambala festival (UK), where phone signal is non-existent yet Meshtastic has proven to work flawlessly).
 
 ---
 
