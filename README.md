@@ -13,13 +13,16 @@
 Finding your friends at festivals without phone signal is HARD, [Meshtastic](https://meshtastic.org/) changes all that. Meshtastic networks use inexpensive devices to enable off-grid communication with total independance from traditional mobile phone infrastructure. Think: Off-Grid WhatsApp messaging that actually works!
 
 #### Goals
-The aim of this guide is to:
+The aim of this guide is:
 
-- Provide sensible settings that you don't need to think about or understand.
+- To provide sensible, proven settings that you don't need to think about or understand 
+  (Settings that are optimised for festival/events)
 
-- A shared mesh configuration to the benefit of everyone (shared settings that are optimised for the festival).
+- To share ONE mesh configuration - to the benefit of everyone
+  (ONE mesh network - rather than many fragmented, conflicting meshes)
 
-- Provide guidance on buying the right devices.
+- To provide guidance on buying the right Meshtastic device
+  (Get going quickly)
 
 
 > The [Official Meshtastic Documentation](https://meshtastic.org/docs/introduction) is excellent however, it can go into a lot of depth and is very broad (to cater to many use cases). This quick-start guide helps you and your friends get up and running quickly without ahving to wade through the dense documentation.
