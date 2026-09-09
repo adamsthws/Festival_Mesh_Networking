@@ -15,13 +15,13 @@ Finding your friends at festivals without phone signal is HARD, [Meshtastic](htt
 #### Goals
 The aim of this guide is:
 
-- To provide sensible, proven settings that you don't need to think about or understand 
+- To provide sensible, proven settings that you don't need to think about or understand  
   (Settings that are optimised for festival/events)
 
-- To share ONE mesh configuration - to the benefit of everyone
+- To share ONE mesh configuration - to the benefit of everyone  
   (ONE mesh network - rather than many fragmented, conflicting meshes)
 
-- To provide guidance on buying the right Meshtastic device
+- To provide guidance on buying the right Meshtastic device  
   (Get going quickly)
 
 
